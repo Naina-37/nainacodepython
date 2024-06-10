@@ -14,6 +14,7 @@ print(result)
 otp = 2810
 user_otp = int(input("enter the otp recieved"))
 print("is otp correct???" , otp == user_otp)
+print("LOGIN SUCCESS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 # MEmbership testing
  # is, is not
 a = 10
@@ -21,3 +22,13 @@ b = 10
 print(a==b)
 print(a is b)
 print(a is not b)
+
+
+
+
+speed = 60
+time = 9
+speed = speed * (5/18)
+length = speed * time
+print("lenghth of train is: ", length)
+
