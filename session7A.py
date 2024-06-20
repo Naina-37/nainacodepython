@@ -1,5 +1,3 @@
-
-
 def get_max(data, length):
     # data, length belongs to get_max frame
     if length == 1:

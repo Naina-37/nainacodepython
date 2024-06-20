@@ -1,4 +1,5 @@
 def square(num):
+    
     print("1. num is:", num, id(num)) # 10
     num = num * num # 100
     print("2. num is:", num, id(num)) # 100
