@@ -18,6 +18,7 @@ class FlightBooking:
         self.travelDate = "18th June, 2024"
         self.numberOfTravllers = 1
         self.travelClass = "Economy"
+        
 
 
     # Parameterized Constructor
@@ -42,7 +43,7 @@ print("booking1 data:")
 booking1.show()
 
 booking2 = FlightBooking("Chennai", "Bengaluru", "18th June, 2024", 1, "premium")
-print("booking2:", booking1)
+print("booking2:", booking2)
 print("bookin2 data:")
 #print(vars(booking2))
 booking2.show()

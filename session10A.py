@@ -8,7 +8,7 @@
 
 """
 
-# from Session10 import Dish
+from session10 import Dish
 
 class Menu:
 
@@ -27,11 +27,11 @@ class Menu:
         for idx in range(len(self.menu_dishes)):
             self.menu_dishes[idx].show()
 
-"""
+
 dishes = [
-        Dish(), 
-        Dish("Dal Makhani", 250, 4.5),
-        Dish(name="Paneer Masala", price=350, rating=4.5)
+    Dish(), 
+    Dish("Dal Makhani", 250, 4.5),
+    Dish(name="Paneer Masala", price=350, rating=4.5)
     ]
 
 menu = Menu(
@@ -40,4 +40,3 @@ menu = Menu(
     menu_dishes=dishes)
 
 menu.show()
-"""

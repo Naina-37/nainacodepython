@@ -41,6 +41,6 @@ class Vehicle:
 # vehicle = Vehicle(reg_number="PB10AB1234", brand="Maruti", model="Swift", color="black")
 # vehicle = Vehicle()
 # vehicle.add_vehicle_details()
-# vehicle.show()
+Vehicle.show()
 
 # print(vars(vehicle))
