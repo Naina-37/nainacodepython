@@ -1,7 +1,8 @@
-# customer management app
+  # customer management app
 
 from session16 import Customer
 from session16A import Database
+from tabulate import tabulate       # pip install tabulate
 
 def main():
     print("-------------------")
@@ -32,18 +33,61 @@ def main():
             print("[CMS App]", customer.name, "Saved in DataBase")
 
         elif choice == 2:
-            pass
+            cid = int(input("Enter Customer ID to Update: "))
+            sql = "select * from Customer where cid = {}".format(cid)
+            rows = db.read(sql)
+            print(rows)
+            
+            customer = Customer(cid=rows[0][0], name=rows[0][1], phone=rows[0][2], email=rows[0][3], age=rows[0][4], gender=rows[0][5])
+
+            print("Customer to Update:")
+            customer.show()
+            customer.update_customer_details()
+
+            sql = "update Customer set name = '{name}', phone='{phone}', email='{email}', age={age}, gender='{gender}', created_on='{created_on}' where cid = {cid}".format_map(vars(customer))
+
+            db.write(sql)
+
+            customer.show()
+            
+
         elif choice == 3:
             cid = int(input("Enter Customer ID to be Deleted: "))
             sql = "delete from Customer where cid = {}".format(cid)
-            db.write(sql)
-            print("[CMS App]", cid, "Deleted from DataBase")
+
+            ask = input("Are you sure to delete? (yes/no): ")
+            if ask == "yes":
+                db.write(sql)
+                print("[CMS App]", cid, "Deleted from DataBase")
+            else:
+                print("Delete Operation Skipped")
+
         elif choice == 4:
-            pass
+            phone = input("Enter Customers Phone Number: ")
+            sql = "select * from Customer where phone = '{}'".format(phone)
+            rows = db.read(sql)
+
+            columns = ["cid", "name", "phone", "email", "age", "gender", "created_on"]    
+            print(tabulate(rows, headers=columns, tablefmt='grid'))
+
         elif choice == 5:
-            pass
+            cid = int(input("Enter Customers ID: "))
+            sql = "select * from Customer where cid = {}".format(cid)
+            rows = db.read(sql)
+
+            columns = ["cid", "name", "phone", "email", "age", "gender", "created_on"]    
+            print(tabulate(rows, headers=columns, tablefmt='grid'))
+
         elif choice == 6:
-            pass
+            sql = "select * from Customer"
+            rows = db.read(sql)
+
+            columns = ["cid", "name", "phone", "email", "age", "gender", "created_on"]    
+            print(tabulate(rows, headers=columns, tablefmt='grid'))
+            
+            # for row in rows:
+            #     print(row)
+
         elif choice == 0:
             break
         else:

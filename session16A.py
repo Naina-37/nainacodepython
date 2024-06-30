@@ -6,9 +6,9 @@ class Database:
 
     def __init__(self):
         self.connection = db.connect(user="root", 
-                        password="", 
+                        password="1234", 
                         host="127.0.0.1", 
-                        database="gw2024pds",
+                        database="gw2810",
                         )
         print("[Database] Connection Created")
 
@@ -24,4 +24,6 @@ class Database:
 
     # fetch data from DB
     def read(self, sql):
-        pass
+        self.cursor.execute(sql)
+        result=self.cursor.fetchall()
+        return result

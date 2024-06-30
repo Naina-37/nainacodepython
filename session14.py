@@ -13,7 +13,7 @@
         use gw2024pds;
 
         # 4: Create table
-        create table Customer(
+        create table  CustomerData1(
             cid int primary key auto_increment,
             name varchar(256), 
             phone varchar(15), 
@@ -30,10 +30,10 @@
 
 
         # 7: Create Customer in Table
-        insert into Customer values(null, 'John', 
+        insert into customer values(null, 'John', 
             '+91 99999 11111', 'john@example,com', 20, 'male');
 
-        insert into Customer values(null, 'Fionna', 
+        insert into customer values(null, 'Fionna', 
             '+91 99999 22222', 'fionna@example,com', 22, 'female');
             
         insert into Customer values(null, 'George', 
