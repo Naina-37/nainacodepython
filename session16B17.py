@@ -5,9 +5,9 @@ from session16A import Database
 from tabulate import tabulate       # pip install tabulate
 
 def main():
-    print("-------------------")
-    print("WELCOME to CMS APP")
-    print("-------------------")
+    print("----------------------------------------------------------------------------------------")
+    print("                                   WELCOME to CMS APP"                                    )
+    print("------------------------------------------------------------------------------------------")
 
     db = Database()
 

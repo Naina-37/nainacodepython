@@ -33,3 +33,5 @@ class Customer:
         data = "{},{},{},{},{},{}\n".format(self.name, 
                                             self.phone, self.email, self.address, self.gender, self.age)
         return data
+
+

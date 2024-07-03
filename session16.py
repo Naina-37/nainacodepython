@@ -12,7 +12,6 @@
     );
 
 """
-
 import datetime
 
 class Customer:
@@ -63,3 +62,4 @@ class Customer:
         print("{} | {} | {}".format(self.name, self.phone, self.email))
         print("{} | {} | {}".format(self.age, self.gender, self.created_on))
         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    add_customer_details.show()

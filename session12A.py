@@ -1,4 +1,4 @@
-from Session11 import Customer
+from session11 import Customer
 
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 print("Welcome to Customer Management System")

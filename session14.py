@@ -128,3 +128,4 @@ customer1 = Customer(name="John", phone="+91 99999 11111", email="john@example.c
 print(vars(customer1))
 
 customer1.show()
+data=Customer()
