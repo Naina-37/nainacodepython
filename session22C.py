@@ -21,10 +21,11 @@ class MongoDBHelper:
         self.collection = self.db[collection]
 
     def insert(self, document):
-        
-        self.collection.insert_one(document)
+        result = self.collection.insert_one(document)
         print("Document inserted in Collection:", self.collection.name)
-    
+        print("result is:", result)
+        return result
+
     def fetch(self, query=""):
         
         documents = self.collection.find(query)
@@ -34,8 +35,10 @@ class MongoDBHelper:
         documents=self.collection._delete_one(query)
         result=self.collection,delete_one(query)
         print("result is:",result)
+        return result
         
     def update(self,document,query):
         document_to_update={'$set': document}
         result=self.collection.update_one(query,document_to_update)
         print("RESult is:", result)
+        return result

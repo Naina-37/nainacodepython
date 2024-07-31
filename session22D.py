@@ -8,13 +8,13 @@ def main():
     print("Welcome to MongoDB Test App")
     dbHelper = MongoDBHelper()
 
-    """
+    
     user = User()
     user.add_user_details()
     document = vars(user)
 
     dbHelper.insert(document)
-    """
+    
 
     # query = {"email": "john@example.com"}
     # query = {"email": "john@example.com", "phone": "8976532786"}
@@ -24,15 +24,15 @@ def main():
 
     # dbHelper.delete(query)
 
-    query = {"email": "naina@example.com"}
+    """query = {"email": "naina@example.com"}
     document_data_to_update = {"name": "George W", "age": 32, "created_on":datetime.datetime.now()}
 
-    #dbHelper.update(document=document_data_to_update, query=query)
+    #dbHelper.update(document=document_data_to_update, query=query)"""
 
     users = dbHelper.fetch()
-    # users = dbHelper.fetch(query)
-    # for user in users:
-        # print(user)
+    #users = dbHelper.fetch(query)
+    for user in users:
+        print(user)
     
 
 if __name__ == "__main__":
