@@ -1,0 +1,16 @@
+
+### 3. Add the README to Your Repository
+
+1. Navigate to your repository on GitHub.
+2. Click on "Add file" and select "Create new file".
+3. Name the file `README.md`.
+4. Copy and paste the content from the template above into the file.
+5. Commit the new file.
+
+### 4. Push Your Code to GitHub
+
+1. Open your terminal or command prompt.
+2. Navigate to your project directory.
+3. Initialize a new git repository (if not already done):
+   ```bash
+   git init
